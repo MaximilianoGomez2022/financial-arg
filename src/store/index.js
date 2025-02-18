@@ -35,7 +35,6 @@ export default createStore({
     },
     llamarNoticias({commit}){
       fetch("https://back-financial.vercel.app/noticias", {
-        mode: 'no-cors'
       })
       .then(response => response.json())
       .then(response => {

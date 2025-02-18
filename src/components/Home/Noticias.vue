@@ -2,18 +2,18 @@
   <section id="noticias-section">
     <h2>ULTIMAS NOTICIAS</h2>
     <div class="container-noticias">
-    <a v-for="noticia in noticias.results" :key="noticia.id" :href="noticia.url">
+    <a v-for="noticia in noticias.results" :key="noticia.id" :href="noticia.link">
         <div class="img-noticia">
-        <img :src="noticia.urlToImage">
+        <img :src="noticia.image_url">
         <div v-if="noticia.urlToImage === null" class="img-aleatoria">
             <img src="https://picsum.photos/seed/picsum/600/320">
         </div>
         </div>
         <div class="texto-noticia">
         <h3>{{noticia.title}}</h3>
-        <p>Fecha: {{formatearFecha(noticia.publishedAt)}}</p>
-        <p v-if="noticia.author !== null">Autor: {{noticia.author}}</p>
-        <p>Portal: {{noticia.source.name}}</p>
+        <p>Fecha: {{formatearFecha(noticia.pubDate)}}</p>
+        <p v-if="noticia.creator !== null">Autor: {{noticia.creator}}</p>
+        <p>Portal: {{noticia.source_name}}</p>
         </div>
     </a>
     </div>

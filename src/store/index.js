@@ -34,7 +34,7 @@ export default createStore({
       .catch( err => console.error(err));
     },
     llamarNoticias({commit}){
-      fetch("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=31bca8c94a954f229cc12bdde714cedd")
+      fetch("https://back-financial.vercel.app/noticias")
       .then(response => response.json())
       .then(response => {
         const noticias = response;

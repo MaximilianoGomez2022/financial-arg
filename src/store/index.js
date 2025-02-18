@@ -34,7 +34,9 @@ export default createStore({
       .catch( err => console.error(err));
     },
     llamarNoticias({commit}){
-      fetch("https://back-financial.vercel.app/noticias")
+      fetch("https://back-financial.vercel.app/noticias", {
+        mode: 'no-cors'
+      })
       .then(response => response.json())
       .then(response => {
         const noticias = response;

@@ -29,12 +29,12 @@
     </form>
     </div>
     <div class="noticia-principal">
-        <a :href="noticiaMasReciente.url">
+        <a :href="noticiaMasReciente.link">
         <h2>NOTICIA PRINCIPAL</h2>
-        <div v-if="noticiaMasReciente.urlToImage === null">
+        <div v-if="noticiaMasReciente.image_url === null">
             <img :src="`https://picsum.photos/1800/900?random=${Math.random()}`">
         </div>
-        <img :src="noticiaMasReciente.urlToImage">
+        <img :src="noticiaMasReciente.image_url">
         <h3>{{noticiaMasReciente.title}}</h3>
         </a>
     </div>
@@ -136,7 +136,7 @@ return [];
 // Función para obtener la noticia más reciente
 const noticiaMasReciente = computed(() => {
 if (noticias.value && noticias.value.length > 0) {
-    return noticias.value.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))[0];
+    return noticias.value.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate))[0];
 } 
 return 'null';
 });

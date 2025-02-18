@@ -5,8 +5,8 @@
     <a v-for="noticia in noticias.results" :key="noticia.id" :href="noticia.link">
         <div class="img-noticia">
         <img :src="noticia.image_url">
-        <div v-if="noticia.urlToImage === null" class="img-aleatoria">
-            <img src="https://picsum.photos/seed/picsum/600/320">
+        <div v-if="noticia.image_url === null" class="img-aleatoria">
+            <img :src="`https://picsum.photos/600/320?random=${Math.random()}`">
         </div>
         </div>
         <div class="texto-noticia">

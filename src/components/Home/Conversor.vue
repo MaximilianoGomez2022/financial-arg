@@ -54,7 +54,7 @@ setup(){
     const resultado = ref(0)
     let mensaje = ref('')
 
-    const noticias = computed(() => store.state.noticias.articles);
+    const noticias = computed(() => store.state.noticias.results);
     const cotizaciones = computed(() => store.state.cotizaciones);
 
 // Función para calcular la conversión de monedas

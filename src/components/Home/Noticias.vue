@@ -112,8 +112,4 @@ img {
     background: white;
 }
 
-.container-noticias a:first-child {
-    display: none;
-}
-
 </style>

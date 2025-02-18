@@ -2,7 +2,7 @@
   <section id="noticias-section">
     <h2>ULTIMAS NOTICIAS</h2>
     <div class="container-noticias">
-    <a v-for="noticia in noticias.articles" :key="noticia.id" :href="noticia.url">
+    <a v-for="noticia in noticias.results" :key="noticia.id" :href="noticia.url">
         <div class="img-noticia">
         <img :src="noticia.urlToImage">
         <div v-if="noticia.urlToImage === null" class="img-aleatoria">
